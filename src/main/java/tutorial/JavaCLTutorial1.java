@@ -16,6 +16,16 @@ public class JavaCLTutorial1 {
     //https://code.google.com/p/javacl/wiki/GettingStarted
     public static void test(String[] args) throws IOException {
         CLContext context = JavaCL.createBestContext();
+
+        System.out.println("platform: " + context.getPlatform().getName()
+                + "#" + context.getPlatform().getVendor()
+                + "#" + context.getPlatform().getVersion());
+        // #
+        CLDevice device = JavaCL.getBestDevice();
+        System.out.println("device: " + device.getName()
+                + "#" + device.getVendor()
+                + "#" + device.getDriverVersion());
+
         CLQueue queue = context.createDefaultQueue();
         ByteOrder byteOrder = context.getByteOrder();
 
