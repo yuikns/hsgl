@@ -1,8 +1,8 @@
 package com.argcv.dvergar.cl.kernels
 
 /**
-  * @author yu
-  */
+ * @author yu
+ */
 object Sample {
   lazy val add_ab =
     """
